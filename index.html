@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Flower website shop</title>
+    <style>
+      .bodysection{
+        background-color: rgb(162, 196, 237);
+        height:200px;
+        width:940px;
+        margin-left:250px;
+        
+      }
+      .bodysection1{
+        background-color: rgb(162, 196, 237);
+        height:200px;
+        width:940px;
+        
+        
+      }
+      .heading{
+        font-size: 100px;
+        color:transparent;
+        -webkit-text-stroke: 3px darkmagenta;
+        position:relative;
+        
+        
+
+      }
+      .heading::before{
+        content:"Floweret Bouquet";
+        position:absolute;
+        width:0px;
+        height:140px;
+        overflow: hidden;
+        color:darkmagenta;
+        border-right:8px solid darkmagenta;
+        transition: 1s ease-in-out;
+
+
+
+      }
+      .heading:hover::before{
+        width:1000px;
+        filter:drop-shadow(0 0 25px darkmagenta);
+      }
+      .bb1{
+        background: linear-gradient(to left,
+        rgb(162, 196, 237),
+        rgb(200, 194, 194),
+        rgb(245, 238, 238));
+      }
+      
+      .a1{
+position:relative;
+background: white;
+color:rgb(24, 19, 19);
+text-decoration: none;
+text-transform: uppercase;
+font-size:medium;
+letter-spacing: 0.1em;
+font-weight: 400;
+padding:10px 30px;
+transition:0.5s;
+
+        }
+        .a1:hover{
+background:var(--clr);
+letter-spacing: 0.25em;
+box-shadow: 0 0 35px var(--clr);
+        }
+        .a1:before{
+           content:'';
+           position:absolute;
+           inset:2px;
+           background: linear-gradient(to left,
+           rgb(162, 196, 237),
+        rgb(200, 194, 194),
+        rgb(245, 238, 238));
+                 
+
+        }
+        
+        .a1 span{
+            position:relative;
+            z-index: 1 ;
+        }
+        .a1 i {
+            position:absolute;
+            inset:0;
+            display: block;
+        }
+        .a1 i::before
+        {
+            content:'';
+            position :absolute;
+            top:0;
+            left:80%;
+            width:10px;
+            height:4px;
+            background: red;
+            transform: translateX(-50%) skewX(325deg);
+            transition:0.5s;
+
+
+        }
+        .a1:hover i::before{
+            width:20px;
+            left:20%;
+        }
+        .a1 i::after
+        {
+            content:'';
+            position :absolute;
+            bottom:0;
+            left:20%;
+            width:10px;
+            height:4px;
+            background: rgb(62, 70, 218);
+            transform: translateX(-50%) skewX(325deg);
+            transition:0.5s;
+
+
+        }
+        .a1:hover i::after{
+            width:20px;
+            left:80%;
+        }
+        /*.F{
+         color: linear-gradient(to bottom,rgb(230, 224, 224),rgb(200, 140, 140),rgb(88, 14, 14));
+        }*/
+        .sectionbody
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	/*background:linear-gradient(red,rgb(55, 13, 13),brown);*/
+  background:linear-gradient(to left,
+           rgb(162, 196, 237),
+        rgb(200, 194, 194),
+        rgb(245, 238, 238));
+                 
+}
+        .containery
+{
+	position: relative;
+	width: 1100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.containery .box
+{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	
+	transition: 0.5s;
+}
+.containery:hover .box
+{
+	
+	transform: scale(0.9);
+	
+}
+.containery .box:hover
+{
+	
+	transform: scale(1);
+	
+}
+.containery .box:before
+{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	filter: url(#wavy);
+}
+.containery .box:nth-child(1):before
+{
+	background: linear-gradient(rgb(236, 175, 5),rgb(216, 129, 23),rgb(159, 103, 25));
+}
+
+.containery .box .content
+{
+	position: absolute;
+	padding: 20px;
+	text-align: center;
+	color: #111;
+	transition: 0.5s;
+}
+.containery .box .content h2
+{
+	font-size: 2em;
+	margin-bottom: -10px;
+}
+svg
+{
+	width: 0;
+	height: 0;
+}
+.section2{
+  background: linear-gradient(to left,rgb(162, 196, 237),
+        rgb(200, 194, 194),
+        rgb(245, 238, 238));
+}
+.boxcover{
+  position: relative;
+  width:350px;
+  height:250px;
+  border: 3px solid #111;
+  
+  border-top-left-radius: 2px;
+
+}
+.boxcover:before{
+  content:'';
+  position: relative;
+  width:380px;
+  height:210px;
+  background:rgb(243, 229, 231);
+  
+  
+  border-top-left-radius: 2px;
+}
+.boxcover:hover{
+  content:'';
+  position: absolute;
+  width:380px;
+  height:210px;
+  background:rgb(39, 32, 33);
+  border: 5px solid #180e0e;
+  
+  border-top-left-radius: 2px;
+}
+/*........................................wavy design criteria..............................................................*/
+
+
+        .water{
+            position: relative;
+        }
+        .water  h2
+        {
+            position: absolute;
+            color:#fff;
+            transform: translate(-50%,-50%);
+            font-size:60px;
+        }
+        .water h2:nth-child(1)
+        {
+            color: transparent;
+            -webkit-text-stroke: 2px #23363f;
+        }
+        .water h2:nth-child(2)
+        {
+            color:darkmagenta;
+            animation: animate 4s ease-in-out infinite;
+        }
+        @keyframes animate
+        {
+            0%,100%
+            {
+              clip-path: polygon(0% 44%, 12% 40%, 18% 45%, 20% 50%, 25% 56%, 29% 59%, 36% 62%, 44% 63%, 52% 58%, 58% 52%, 68% 49%, 75% 55%, 77% 60%, 86% 62%, 95% 64%, 99% 61%, 100% 98%, 0% 99%); 
+            }
+            50%
+            {
+              clip-path: polygon(0% 73%, 4% 65%, 13% 59%, 19% 62%, 23% 66%, 30% 73%, 38% 73%, 41% 70%, 45% 63%, 52% 58%, 60% 58%, 67% 61%, 72% 65%, 80% 61%, 85% 57%, 88% 52%, 95% 46%, 99% 42%, 100% 98%, 0% 100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+  <!-------------------------------------------------------------------------------------------------1st part--------------------------------------------------->
+    <section class="container"style="height:auto;width:1500px;margin-top:20px;">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class=""style="position:fixed;margin-bottom:10px;background:linear-gradient(to left,rgb(162, 196, 237),
+        rgb(200, 194, 194),
+        rgb(245, 238, 238));
+                 width:1300px;">
+        <div class="d-flex "style="margin-left:30px;">
+          <div style="margin-right: 50px;">
+            <h1>Floweret💐Bouquet</h1>
+          </div>
+          
+        <div>
+    <ul class="nav justify-content-center"style="margin-left:10px;magin-top:10px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Address</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Galary</a>
+        </li>
+        
+      </ul>
+      </div>
+      <div >
+          <form class="d-flex justify-content-end" style="margin-left: 170px;margin-top:10px;" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success " type="submit">Search</button>
+            <button class="rounded"style="margin-left:20px;background:linear-gradient(to left,red,white,rgb(245, 238, 238),rgb(162, 196, 237));"><i class="fa-sharp fa-solid fa-cart-shopping">shopping</i></button>
+          </form>
+        </div>
+    </div>
+    </div>
+      </nav>
+      
+
+   <div id="carouselExampleSlidesOnly" class="carousel slide shadow-lg rounded" data-bs-ride="carousel"style="margin-top:10px;margin-bottom:8px;">
+      <div class="carousel-inner">
+        <div data-aos="zoom-in" data-aos-delay="500"data-aos-duration="1000"  class="carousel-item active">
+          <div data-aos="zoom-in" data-aos-delay="500"data-aos-duration="1000"class="card text-bg-dark">
+       <img src="./cover/cover51.jpg" class="d-block  "style="height:450px;width:1500px;" alt="...">
+        <div class="card-img-overlay">
+          <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000" class="boxcover"style="margin-left:60px;margin-top:100px;">
+          <h5 class="card-title"style="margin-left:60px;">Blossom first pickup</h5>
+          <p class="card-text"style="margin-left:10px;font-size:20px;">Make your day more beautifulMake your day more beautifulMake your day more beautifulMake your day more beautiful</p>
+          <p class="card-text"><small style="margin-left:10px;">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary rounded"style="margin-left:120px;">submit</a>
+        </div>
+      </div>
+    </div>
+          
+         
+                 
+        </div>
+        <div class="carousel-item">
+          <div class="card text-bg-dark">
+       <img src="file:///C:/Users/WALTON/Desktop/New%20folder/cover/cover31.webp" class="d-block "style="height:450px;width:1500px;" alt="...">
+        <div class="card-img-overlay">
+          <div  data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="boxcover"style="margin-left:250px;margin-top:100px;">
+          <h5 class="card-title"style="color:black;"><b>Card title</b></h5>
+          <p class="card-text"style="color:black;font-size:20px;"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
+          <p class="card-text"style="color:black;font-size:20px;"><small>Last updated 300 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+          
+        </div>
+        <div class="carousel-item">
+          <div class="card text-bg-dark">
+            <img src="file:///C:/Users/WALTON/Desktop/New%20folder/cover/COVER9.webp" class="d-block "style="height:450px;width:1500px;" alt="...">
+             <div  data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000" class="card-img-overlay">
+              <div class="boxcover"style="margin-left:600px;margin-top:100px;">
+                <h5 class="card-title"style="color:black;"><b>Card title</b></h5>
+                <p class="card-text"style="color:black;font-size:20px;"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
+                <p class="card-text"style="color:black;font-size:20px;"><small>Last updated 300 mins ago</small></p>
+              </div>
+                </div>
+              </div>
+    </div>
+    </section>
+    <!-----------------------------------------------------------------------------------------------first part end------------------------------------------------>
+    <!-----------------------------------------------------------------------------------------------second part start------------------------------------------------>
+    <section >
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div  class="section2">
+        <h1 data-aos="flip-right" data-aos-delay="500"data-aos-duration="1000" class="heading drop-shadow "style="height:200px;width:1000px;margin-left:190px;">Floweret Bouquet</h1>
+
+      </div>
+</div>
+    </section>
+    <section >
+      <div data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000" class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div class="section2">
+        <div class="d-flex">
+          <div class="d-flex">
+            
+            <div data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000">
+          <img src="./sidecoverpic/roseday2.jpg"class="rounded"style="width:270px;height:140px;">
+          </div>
+          <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000" class="bb1 shadow-lg rounded"style="height:140px;width:360px;margin-top:50px;">
+          <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+          <p style="margin-left: 7px;">"Love is the only reality, and it is not mere sentiment. It is the ultimate truth that lies at the heart of creation"- Rabindranath Tagore</p>
+        </div>
+        </div>
+        <div class="d-flex">
+          <div data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000">
+        <img src="./sidecoverpic/roseday3.jpg"class="rounded"style="width:270px;height:140px;border:3px solid white;margin-left:10px;">
+        </div>
+        <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000" class="bb1 shadow-lg rounded"style="height:140px;width:360px;background-color: aquamarine;margin-top:50px;">
+        <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+        <p style="margin-left: 7px;">"You are part of my existence, part of myself. You have been in every line I have ever read." - Charles Dickens.</p>
+      </div>
+      </div>
+      </div>
+</div>
+    </section>
+    <!-----------------------------------------------------------------------------------------------2nd part end------------------------------------------------>
+    <!-----------------------------------------------------------------------------------------------rose card part start------------------------------------------------>
+    <section>
+      <div class="backgroundcriteria container "style="height:1280px;width:1500px;background:linear-gradient(to left,rgb(162, 196, 237),
+      rgb(200, 194, 194),
+      rgb(245, 238, 238))">
+        <div class="row">
+          <div class="col-sm-3 mb-3 mb-sm-0"style="margin-top:50px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/blueamdwhite.jpg" class="card-img-top"style="height:190px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title ff treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a  href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span >Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/blue rose.jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/mishtyrose.jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/yellowrose.jpg" style="height:190px;"class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title fft treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/whiterose.jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/red rose.jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/peachrose.jpg" style="height:190px;"class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/lightmistyrose.jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/flowerone.jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/blackrose.jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+              <img src="./rose/peachrose.jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div data-aos="fade-up-right" data-aos-delay="500"data-aos-duration="1000" class="card"style="width: 18rem;">
+              
+                <img src="./rose/rosecatalog.jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Day 61t/index.html"class="a1"style="--clr:#333FFF"><span>Buy NOW</span><i></i></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+    <!-----------------------------------------------------------------------------------------------rose card part end------------------------------------------------>
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+    
+    <section class="sectionbody container">
+      
+
+
+
+      <div class="containery">
+        <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000"class="box"style="margin-right:50px;">
+          <div class="content">
+            <h2>wedding card</h2><br>
+            <p>Love letters have always been the sweetest and most thoughtful way of expressing feelings.can spark romantic vibes in this millennial age. So don’t hesitate to pour your heart out in these letters to your girlfriend. In this post, we share tips on how to write a love letter and then bring you a collection of emotional and romantic love letters to send to your girlfriend.</p>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000"class="rounded-end-circle"style="height:400px;width:400px;background-color: aliceblue;color: #000;margin-left:0px;">
+          <img src="./sidecoverpic/leftgroom.jpg"class="rounded-end-circle">
+            </div>
+        <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000"class="rounded-start-pill"style="height:400px;width:400px;background-color: aliceblue;color: #000;margin-left:0px;">
+          <img src="./sidecoverpic/rightsidebride.jpg"class="rounded-start-pill">
+            </div>
+        
+      </div>
+      
+      <svg>
+          <filter id="wavy">
+            <feTurbulence x="0" y="0" id="turbulence" baseFrequency="0.01" numOctaves="5" seed="2">
+              <animate attributeName="baseFrequency" dur="60s" values="0.01;0.05;0.01" repeatCount="indefinite" />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="30" />
+          </filter>
+        </svg>
+        
+    
+        </section>
+      </div>
+    <!-----------------------------------------------------------------------------------------------wedding part end------------------------------------------------>
+    <section >
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div class="bodysection1 ">
+        <div class="d-flex">
+          <div class="d-flex">
+            <div>
+          <img src="./sidecoverpic/roseday2.jpg"class="rounded"style="width:270px;height:140px;">
+          </div>
+          <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;margin-top:50px;">
+          <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+          <p style="margin-left: 7px;">"Love is the only reality, and it is not mere sentiment. It is the ultimate truth that lies at the heart of creation"- Rabindranath Tagore</p>
+        </div>
+        </div>
+        <div class="d-flex">
+          <div>
+        <img src="./sidecoverpic/roseday3.jpg"class="rounded"style="width:270px;height:140px;border:3px solid white;margin-left:10px;">
+        </div>
+        <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;background-color: aquamarine;margin-top:50px;">
+        <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+        <p style="margin-left: 7px;">"You are part of my existence, part of myself. You have been in every line I have ever read." - Charles Dickens.</p>
+      </div>
+      </div>
+      </div>
+</div>
+    </section>
+    <section>
+      <div class="backgroundcriteria container"style="height:1280px;width:1500px;">
+        <div class="row">
+          <div class="col-sm-3 mb-3 mb-sm-0"style="margin-top:50px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (20).jpg" class="card-img-top"style="height:190px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (13).jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (14).jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:50px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (15).jpg" style="height:190px;"class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (16).jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (17).jpg"style="height:190px; "class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (18).jpg" style="height:190px;"class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (18).jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (19).jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (18).jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3"style="margin-top:20px;">
+            <div class="card"style="width: 18rem;">
+              
+              <img src="./flower/images (15).jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 box"style="margin-top:20px;">
+            <div class="card content "style="width: 18rem;">
+              
+                <img src="./flower/images (21).jpg"style="height:190px;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">hhhhh</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+    <section >
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div class="bodysection1 ">
+        <div class="d-flex">
+          <div class="d-flex">
+            <div>
+          <img src="./sidecoverpic/roseday2.jpg"class="rounded"style="width:270px;height:140px;">
+          </div>
+          <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;margin-top:50px;">
+          <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+          <p style="margin-left: 7px;">"Love is the only reality, and it is not mere sentiment. It is the ultimate truth that lies at the heart of creation"- Rabindranath Tagore</p>
+        </div>
+        </div>
+        <div class="d-flex">
+          <div>
+        <img src="./sidecoverpic/loveshape.jpg"class="rounded"style="width:270px;height:140px;border:3px solid white;margin-left:10px;">
+        </div>
+        <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;background-color: aquamarine;margin-top:50px;">
+        <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+        <p style="margin-left: 7px;">"You are part of my existence, part of myself. You have been in every line I have ever read." - Charles Dickens.</p>
+      </div>
+      </div>
+      </div>
+</div>
+    </section>
+    <section >
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div class=" "style="width:1500px;height:700px;">
+        <div class="d-flex">
+          <div class="d-flex">
+            <div>
+          <img src="./marriagepiccover/happymarriagepiccover.jpg"class="rounded"style="width:600px;height:400px;position:absolute;">
+          </div>
+          <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;margin-top:50px;position:relative;">
+          <h1 style="margin-left: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HAPPY ROSE DAY</h1>
+          <p style="margin-left: 7px;">"Love is the only reality, and it is not mere sentiment. It is the ultimate truth that lies at the heart of creation"- Rabindranath Tagore</p>
+        </div>
+        </div>
+        
+      </div>
+</div>
+    </section>
+    <section >
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container">
+      <div class=" "style="width:1500px;height:700px;">
+        <div class="d-flex">
+          <div class="d-flex">
+            <div>
+          <img src="./marriagepiccover/happymarriagepiccover.jpg"class="rounded"style="width:600px;height:400px;position:absolute;">
+          </div>
+          <div class="bb1 shadow-lg rounded"style="height:140px;width:360px;margin-top:50px;position:relative;margin-left:300px;">
+            <img src="./sidecoverpic/loveshape.jpg">
+          </div>
+          </div>
+        
+      </div>
+</div>
+    </section>
+    <!--------------------------------------------------------------------------wedding part---------------------------------------------->
+    
+    
+  <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container"style="height:700px;width:1300px;margin-top:30px;background: linear-gradient(to left,
+  rgb(162, 196, 237),
+  rgb(200, 194, 194),
+  rgb(245, 238, 238));">
+      
+      <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" style="margin-left:700px;margin-top:50px;" class="water">
+        <h2>Wedding Ceremony</h1>
+        <h2>Wedding Ceremony</h1>
+    </div>
+
+
+	<div class="containery"style="margin-top:100px;margin-left:50px;">
+    
+		<div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000"class="box"style="margin-right:50px;">
+			<div class="content">
+				<h2>wedding card</h2><br>
+				<p>Love letters have always been the sweetest and most thoughtful way of expressing feelings.can spark romantic vibes in this millennial age. So don’t hesitate to pour your heart out in these letters to your girlfriend. In this post, we share tips on how to write a love letter and then bring you a collection of emotional and romantic love letters to send to your girlfriend.</p>
+			</div>
+		</div>
+		<div data-aos="fade-left" data-aos-delay="500"data-aos-duration="1000"class="rounded-end-circle"style="height:400px;width:400px;background-color: aliceblue;color: #000;margin-left:0px;">
+			<img src="./sidecoverpic/leftgroom.jpg"class="rounded-end-circle">
+				</div>
+		<div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000"class="rounded-start-pill"style="height:400px;width:400px;background-color: aliceblue;color: #000;margin-left:0px;">
+			<img src="./sidecoverpic/rightsidebride.jpg"class="rounded-start-pill">
+				</div>
+		
+	</div>
+	
+	<svg>
+      <filter id="wavy">
+        <feTurbulence x="0" y="0" id="turbulence" baseFrequency="0.01" numOctaves="5" seed="2">
+          <animate attributeName="baseFrequency" dur="60s" values="0.01;0.05;0.01" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="30" />
+      </filter>
+  	</svg>
+	  
+</div>
+    </section>
+    
+    <!----------------------------------------------------------wedding part end---------------------------------------------------------->
+   
+     
+    
+    
+    <section>
+      
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded container"style="height:700px;width:1300px;margin-top:50px;background: linear-gradient(to left,
+    rgb(162, 196, 237),
+    rgb(200, 194, 194),
+    rgb(245, 238, 238));">
+    <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000" style="margin-left:600px;margin-top:50px;" class="water">
+      <h2>Wedding Ceremony</h1>
+      <h2>Wedding Ceremony</h1>
+  </div>
+        <div class="d-flex">
+
+          <div data-aos="fade-up-left" data-aos-delay="500"data-aos-duration="1000"><img src="./marriagepiccover/happymarriagepiccover.jpg"style="height:500px;width:600px;margin-top:70px;"></div>
+          <div class="containery" style="margin-left:150px;margin-top:70px;">
+            <div data-aos="fade-right" data-aos-delay="500"data-aos-duration="1000"class="box"style="margin-right:50px;">
+              <div class="content">
+                <h2>Anniversary</h2><br>
+                <p>Love letters have always been the sweetest and most thoughtful way of expressing feelings.can spark romantic vibes in this millennial age. So don’t hesitate to pour your heart out in these letters to your girlfriend. In this post, we share tips on how to write a love letter and then bring you a collection of emotional and romantic love letters to send to your girlfriend.</p>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+    <svg>
+      <filter id="wavy">
+        <feTurbulence x="0" y="0" id="turbulence" baseFrequency="0.01" numOctaves="5" seed="2">
+          <animate attributeName="baseFrequency" dur="60s" values="0.01;0.05;0.01" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="30" />
+      </filter>
+    </svg>
+    
+  </section>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+   
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</html>
